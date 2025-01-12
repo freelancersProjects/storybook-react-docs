@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "build:lib": "vite build",
+    "export:lib": "node export-lib.js"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.4",
@@ -36,6 +38,7 @@
     "eslint-plugin-storybook": "^0.11.2",
     "globals": "^15.14.0",
     "prop-types": "^15.8.1",
+    "shelljs": "^0.8.5",
     "storybook": "^8.4.7",
     "vite": "^6.0.5"
   },

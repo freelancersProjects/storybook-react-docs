@@ -1,0 +1,26 @@
+{
+  "name": "freelancers-storybook",
+  "version": "1.0.1",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "description": "Librairie de composants React pour Freelancers",
+  "main": "my-react-lib.es.js",
+  "module": "my-react-lib.es.js",
+  "style": "freelancers-storybook.css",
+  "files": [
+    "*.js",
+    "*.css"
+  ],
+  "peerDependencies": {
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0"
+  },
+  "keywords": [
+    "react",
+    "components",
+    "ui"
+  ],
+  "author": "Mathis.bls",
+  "license": "MIT"
+}
