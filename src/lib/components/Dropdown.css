@@ -1,0 +1,79 @@
+/* Conteneur principal */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+}
+
+.dropdown-border {
+  border: 1px solid var(--text-color, #333);
+}
+
+/* Bouton */
+.dropdown-button {
+  width: 100%;
+  padding: 10px;
+  background-color: var(--background-color, #fff);
+  color: var(--text-color, #333);
+  cursor: pointer;
+  text-align: left;
+  position: relative;
+  border: 1px solid transparent;
+  box-sizing: border-box; /* Évite les dépassements */
+}
+
+.dropdown-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 12px;
+}
+
+/* Liste déroulante */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%; /* Alignement parfait avec le bouton */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  border: 1px solid transparent;
+  box-sizing: border-box; /* Pour éviter les dépassements */
+}
+
+.dropdown-border .dropdown-menu {
+  border-color: var(--text-color, #333);
+}
+
+/* Animation déroulante */
+.dropdown-slide-in {
+  animation: slide-in 0.3s ease-out forwards;
+}
+
+@keyframes slide-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Élément de la liste */
+.dropdown-item {
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  background-color: var(--background-color, #fff);
+  color: var(--text-color, #333);
+}
+
+.dropdown-item:hover {
+  background-color: var(--hover-color, #f1f1f1);
+}

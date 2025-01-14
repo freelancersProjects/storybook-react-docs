@@ -1,13 +1,29 @@
+import React from 'react';
 import PropTypes from 'prop-types';
 import './Button.css';
 
-const Button = ({ label, onClick, type = 'button', disabled = false, theme = 'primary', className = '' }) => {
+const Button = ({
+    label = 'Button',
+    backgroundColor = '#6c63ff',
+    hoverColor = '#4e4fcf',
+    textColor = '#fff',
+    borderRadius = '8px',
+    fontSize = '1rem', // Taille de la police par défaut
+    disabled = false, // État désactivé
+    onClick,
+}) => {
     return (
         <button
-            type={type}
+            className="custom-button"
+            style={{
+                '--background-color': backgroundColor,
+                '--hover-color': hoverColor,
+                '--text-color': textColor,
+                '--border-radius': borderRadius,
+                '--font-size': fontSize,
+            }}
             onClick={onClick}
             disabled={disabled}
-            className={`btn btn-${theme} ${className}`}
         >
             {label}
         </button>
@@ -15,19 +31,14 @@ const Button = ({ label, onClick, type = 'button', disabled = false, theme = 'pr
 };
 
 Button.propTypes = {
-    label: PropTypes.string.isRequired,
-    onClick: PropTypes.func,
-    type: PropTypes.oneOf(['button', 'submit', 'reset']),
+    label: PropTypes.string,
+    backgroundColor: PropTypes.string,
+    hoverColor: PropTypes.string,
+    textColor: PropTypes.string,
+    borderRadius: PropTypes.string,
+    fontSize: PropTypes.string,
     disabled: PropTypes.bool,
-    theme: PropTypes.oneOf(['primary', 'secondary', 'danger']),
-    className: PropTypes.string,
-};
-
-Button.defaultProps = {
-    onClick: () => { },
-    disabled: false,
-    theme: 'primary',
-    className: '',
+    onClick: PropTypes.func,
 };
 
 export default Button;
