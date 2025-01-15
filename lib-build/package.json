@@ -1,13 +1,9 @@
 {
-  "name": "freelancers-storybook",
+  "name": "react-freelancers-components",
   "version": "1.0.1",
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org"
-  },
-  "description": "Librairie de composants React pour Freelancers",
+  "description": "Librairie de composants React",
   "main": "my-react-lib.es.js",
   "module": "my-react-lib.es.js",
-  "style": "freelancers-storybook.css",
   "files": [
     "*.js",
     "*.css"
